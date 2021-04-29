@@ -3,17 +3,8 @@ import './styles.scss';
 
 const ReactToaster = (props) => {
 
-  const [status, setStatus] = useState(false);
-  const [type, setType] = useState(props.type ? props.type : 'info')
-  const [alert, setAlert] = useState(
-    props.alert ? props.alert : 'Something wrong!'
-  )
+  const [type, setType] = useState(props.type ? props.type : 'info');
 
-  useEffect(() => { }, [alert, setAlert]);
-  return (
-    <div>
-      {props.type ? props.type : "null"}
-    </div>
-  )
+  return <div>{type}</div>
 }
 export default ReactToaster;
